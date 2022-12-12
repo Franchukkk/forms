@@ -1,0 +1,758 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 75px 0 144px 0px;
+}
+
+
+.wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    margin-bottom: 71px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 20px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-family: "Roboto";
+    margin-bottom: 28px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form1 {
+    max-width: 330px;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+}
+
+select{
+    font-family: "Roboto";
+}
+
+.form1 textarea {
+    height: 110px;
+}
+
+.form1 input::placeholder,
+.form1 textarea::placeholder {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form1 input,
+.form1 textarea,
+.form1 select {
+    border: none;
+    border: 1px solid #cccccc;
+    background-color: #fff;
+    width: 305px;
+    padding: 11.5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.form1 select {
+    width: 330px;
+}
+
+.form1 input:hover {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+.form1 select:hover {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+.form1 textarea:hover {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+.form1 a {
+    position: relative;
+    top: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    background-color: #12d661;
+    text-decoration: none;
+    padding: 13.5px 108.18px;
+    transition: 0.2s;
+}
+
+.form1 a:hover {
+    background-color: #07be51;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dcdcde;
+    margin-bottom: 50px;
+}
+
+.form2 {
+    margin-bottom: 50px;
+}
+
+.radio p {
+    margin-bottom: 14px;
+}
+
+.radio label {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+label.disabled {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.check {
+    display: none;
+}
+
+.tick {
+    position: relative;
+    margin-bottom: 13px;
+}
+
+.check+label {
+    position: relative;
+}
+
+.check+label::before {
+    content: "";
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    transition: 0.5s;
+}
+
+.check+label:hover::before {
+    border: 1px solid #244dd7;
+}
+
+.check+label::before,
+.check+label::after {
+    content: "";
+    position: absolute;
+}
+
+.check:checked+label:after {
+    left: 5px;
+    top: 5px;
+    width: 7px;
+    height: 4px;
+    border-left: 2px solid #244dd7;
+    border-bottom: 2px solid #244dd7;
+    transform: rotate(-45deg);
+}
+
+
+
+.tick p {
+    position: relative;
+    top: 1px;
+    margin-left: 28px;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.tick-disabled .check+label::before {
+    background-color: #f7f7f7;
+}
+
+.tick-disabled p {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.tick-disabled .check+label:hover::before {
+    border: 1px solid #cccccc;
+}
+
+.date {
+    width: 430px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    padding: 24px 21px;
+}
+
+.date h3 {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.date .flex {
+    align-items: center;
+    column-gap: 37px;
+}
+
+.date-input {
+    border: 1px solid #cccccc;
+    padding: 11.35px 18px;
+}
+
+.people-check .check+label::before {
+    content: '';
+    background: url(../images/man-checkbox.png) no-repeat;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+}
+
+.people-check .tick {
+    margin-bottom: 0px;
+}
+
+.people-check .tick:last-child .check+label::before {
+    background: url(../images/woman-checkbox.png) no-repeat;
+}
+
+
+.people-check p {
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.people-check p {
+    font-size: 16px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+    transition: 0.2s;
+}
+
+.people-check p:hover {
+    font-size: 16px;
+    color: #3e6aff;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.people-check .check:checked+label:after {
+    content: "";
+    background-image: url(../images/man-checkbox-hover.png);
+    width: 70px;
+    height: 70px;
+    border: none;
+    transform: rotate(0deg);
+    left: 0;
+    top: 0;
+}
+
+.people-check .woman:checked+label:after {
+    content: "";
+    background-image: url(../images/woman-checkbox-hover.png);
+    width: 70px;
+    height: 70px;
+    border: none;
+    transform: rotate(0deg);
+    left: 0;
+    top: 0;
+}
+
+
+.people-check .tick:last-child {
+    top: 40px;
+}
+
+.slider-styled input {
+    display: none;
+}
+
+.slider:before {
+    content: "";
+    position: relative;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+}
+
+.switch-for {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 25px;
+    position: relative;
+}
+
+.switch-for::before {
+    content: "";
+    width: 45px;
+    height: 25px;
+    background-color: #cfcfd1;
+    border-radius: 15px;
+    position: absolute;
+    top: -4px;
+    left: -60px;
+}
+
+.switch-for:after {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -58px;
+    bottom: -2px;
+    z-index: 1;
+}
+
+.switch {
+    display: none;
+}
+
+.switch:checked+.switch-for::after {
+    left: -38px;
+}
+
+.switch:checked+.switch-for::before {
+    background-color: #3e6aff;
+}
+
+.switch-for {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.slider-styled form {
+    margin-bottom: 20px;
+}
+
+.slider-styled {
+    margin-top: 30px;
+}
+
+.form3 {
+    margin-bottom: 50px;
+}
+
+.form4 th {
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.form4 td {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form4 ::placeholder {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form4 input:not(.radio-male input, .photo-input input),
+.form4 textarea,
+.form4 select {
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 12.5px 15px;
+    width: 309px;
+}
+
+.form4 input:not(.radio-male input, .photo-input input):hover,
+.form4 textarea:hover,
+.form4 select:hover {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+}
+
+.form4 select {
+    padding: 11.5px 15px;
+    width: 341px;
+}
+
+.form4 textarea {
+    height: 104px;
+}
+
+.photo-input input {
+    display: none;
+}
+
+.photo-input {
+    position: relative;
+}
+
+.photo-input>label {
+    position: relative;
+}
+
+.photo-input label::before {
+    position: absolute;
+    content: "Виберіть файл";
+    top: -10px;
+    width: 170px;
+    height: 29px;
+    border-radius: 3px;
+    background-color: #3e6aff;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    padding-top: 12px;
+    transition: 0.2s;
+}
+
+.photo-input label:hover::before {
+    filter: drop-shadow(0px 2px 2.5px rgba(15, 40, 126, 0.35));
+    background-color: #2857f4;
+}
+
+.form4 tr {
+    display: block;
+    margin-bottom: 13px;
+}
+
+.form4 .photo-input {
+    margin-bottom: 21px;
+}
+
+.form4 .radio-male {
+    margin-bottom: 17px;
+}
+
+.radio-male label {
+    margin-right: 30px;
+}
+
+.form4 td:first-child {
+    width: 160px;
+}
+
+.radio-male td:last-child {
+    margin-right: 25px;
+}
+
+.form4 tr:last-child>td:first-child {
+    padding-bottom: 95px;
+}
+
+.form4 {
+    margin-bottom: 72px;
+}
+
+.form4 a {
+    position: relative;
+    top: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    background-color: #12d661;
+    text-decoration: none;
+    padding: 13.5px 114px;
+    transition: 0.2s;
+    margin-left: 166px;
+}
+
+.form-container {
+    width: 258px;
+    padding: 25px;
+    padding-bottom: 55px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+}
+
+.form-container a:last-child {
+    position: relative;
+    top: 21px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    background-color: #12d661;
+    text-decoration: none;
+    padding: 13.5px 108.87px;
+    transition: 0.2s;
+}
+
+.form-container .check+label {
+    top: 7px;
+}
+
+.form-container .tick p {
+    top: 2px;
+}
+
+#pass {
+    margin-bottom: 0;
+}
+
+.form-container a:last-child:hover {
+    background-color: #07be51;
+}
+
+.form-container input {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px 0;
+}
+
+.form-container p:not(p:first-child) {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin-bottom: 8px;
+}
+
+.form-container input {
+    margin-bottom: 4px;
+}
+
+
+.password-for {
+    position: relative;
+    font-size: 13px;
+    color: #3e6aff;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-decoration: none;
+
+
+}
+
+.form-container input {
+    transition: 0.2s;
+}
+
+.form-container input:hover {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+.password-for:hover {
+    text-decoration: underline;
+    color: #3e6aff;
+}
+
+.form-container label p {
+    font-size: 13px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form5 th {
+    text-align: left;
+}
+
+.form5 tr:first-child th:first-child {
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.form5 th {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form5 td {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+    padding-bottom: 5px;
+}
+
+.form5 input,
+.form5 select {
+    width: 196px;
+    padding: 11.5px 10px;
+    margin-right: 7px;
+}
+
+.form5 select {
+    width: 220px;
+}
+
+.form5 table {
+    position: relative;
+}
+
+
+input.adress-input {
+    position: absolute;
+    width: 425px;
+    top: 184px;
+}
+
+.form5 input:hover,
+.form5 select:hover {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+.form5 .tick {
+    padding-top: 22px;
+}
+
+.form5 p {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form5 thead::after {
+    content: "";
+    width: 680px;
+    height: 1px;
+    background-color: #000;
+}
+
+.form5 {
+    position: relative;
+}
+
+.form5 tbody tr:first-child td input {
+    display: block;
+    margin-bottom: 56px;
+}
+
+.buttons a:first-child {
+    font-size: 14px;
+    color: #6e6f77;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    width: 180px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #85868d;
+    text-decoration: none;
+    padding: 12.5px 24.6px;
+    transition: 0.5s;
+    margin-right: 320px;
+}
+
+.buttons a:first-child:hover {
+    background-color: #85868d;
+    color: #ffffff;
+}
+
+.buttons a:last-child {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    width: 180px;
+    height: 43px;
+    border-radius: 3px;
+    background-color: #12d661;
+    text-decoration: none;
+    padding: 12.5px 26.8px;
+    transition: 0.5s;
+}
+
+.buttons a:last-child:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(8, 118, 52, 0.35));
+    background-color: #07be51;
+}
+
+.th {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.first-hr {
+    position: absolute;
+    width: 680px;
+ top: 181px;
+}
+
+.last-hr {
+    position: relative;
+    top: 10px;
+    width: 680px;
+}
