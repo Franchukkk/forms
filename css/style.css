@@ -22,10 +22,6 @@ body {
     display: flex;
 }
 
-header {
-    margin-bottom: 71px;
-}
-
 h1 {
     font-size: 30px;
     color: #1f222c;
@@ -59,7 +55,7 @@ select {
     outline: none;
 }
 
-select{
+select {
     font-family: "Roboto";
 }
 
@@ -126,6 +122,7 @@ select{
 
 .form1 a:hover {
     background-color: #07be51;
+    filter: drop-shadow(0px 2px 2.5px rgba(8, 118, 52, 0.35));
 }
 
 hr {
@@ -521,7 +518,19 @@ label.disabled {
     margin-left: 166px;
 }
 
+.form4 a:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(8, 118, 52, 0.35));
+    background-color: #07be51;
+}
+
+.form6{
+    position: relative;
+    height: 444px;
+}
+
 .form-container {
+    position: sticky;
+    top: 10px;
     width: 258px;
     padding: 25px;
     padding-bottom: 55px;
@@ -560,6 +569,7 @@ label.disabled {
 
 .form-container a:last-child:hover {
     background-color: #07be51;
+    filter: drop-shadow(0px 2px 2.5px rgba(8, 118, 52, 0.35));
 }
 
 .form-container input {
@@ -662,7 +672,18 @@ label.disabled {
 input.adress-input {
     position: absolute;
     width: 425px;
-    top: 184px;
+    top: 192px;
+}
+
+.form5 th{
+    padding-bottom: 5px;
+}
+
+.form5 input,
+.form5 select {
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
 }
 
 .form5 input:hover,
@@ -748,7 +769,12 @@ input.adress-input {
 .first-hr {
     position: absolute;
     width: 680px;
- top: 181px;
+    top: 190px;
+}
+
+.form5 select{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .last-hr {

@@ -58,36 +58,35 @@
                     </form>
                     <a href="#">Зареєструватися</a>
                 </div>
-                <div class="form6">
-                    <h2>06. фіксована форма</h2>
 
-                    <div class="form-container">
-                        <p>
-
-                            <label for="login">
-                                <p>Логін</p>
-                            </label>
-                            <input id="login" type="text">
-                        </p>
-                        <p>
-                            <label for="pass">
-                                <p>Пароль</p>
-                            </label>
-                            <input id="pass" type="password">
-                        </p>
-                        <a class="password-for" href="#">Забули пароль?</a>
-                        <div class="tick">
-                            <form>
+                <div class="form6-relative">
+                    <div class="form6">
+                        <h2>06. фіксована форма</h2>
+                        <div class="form-container">
+                            <p>
+                                <label for="login">
+                                    <p>Логін</p>
+                                </label>
+                                <input id="login" type="text">
+                            </p>
+                            <p>
+                                <label for="pass">
+                                    <p>Пароль</p>
+                                </label>
+                                <input id="pass" type="password">
+                            </p>
+                            <a class="password-for" href="#">Забули пароль?</a>
+                            <div class="tick">
                                 <input class="check" id="forget" type="checkbox">
                                 <label for="forget">
                                     <p>Запам’ятати пароль</p>
                                 </label>
-                            </form>
+                            </div>
+                            <a href="#">Увійти</a>
                         </div>
-                        <a href="#">Увійти</a>
                     </div>
-
                 </div>
+
             </div>
         </header>
         <main>
@@ -217,113 +216,114 @@
             <hr>
             <div class="form4">
                 <h2>04. форма таблицею</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Заповніть усі необхідні поля</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ФІО:</td>
-                            <td><input type="text" placeholder="Введіть ім’я"></td>
-                        </tr>
-                        <tr>
-                            <td>Пароль:</td>
-                            <td><input type="password" pattern="[6-25]" placeholder="Введіть не менше 6 символів"></td>
-                        </tr>
-                        <tr>
-                            <td>Місто:</td>
-                            <td>
-                                <p>
-                                    <label>
-                                        <select name="user-city" id="user-city">
-                                            <option value="Хмельницький">Хмельницький</option>
-                                        </select>
-                                    </label>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr class="radio-male">
-                            <td>Стать:</td>
-                            <td>
-
-                                <input type="radio" id="male-choice1" name="delivery" value="new-post">
-                                <label for="male-choice1">Чоловік</label>
-
-                                <input type="radio" id="male-choice2" name="delivery" value="courier">
-                                <label for="male-choice2">Жінка</label>
-
-                            </td>
-                        </tr>
-                        <tr class="photo-input">
-                            <td>Фото:</td>
-                            <td>
-                                <input class="file" type="file" id="file" accept=".jpg, .jpeg, .png">
-                                <label class="label-file" for="file"></label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Коментарій:</td>
-                            <td><textarea name="tetarea-message" id="tetarea-message"
-                                    placeholder="Введіть текст повідомлення" cols="30" rows="10"></textarea></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <form action="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Заповніть усі необхідні поля</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ФІО:</td>
+                                <td><input type="text" placeholder="Введіть ім’я"></td>
+                            </tr>
+                            <tr>
+                                <td>Пароль:</td>
+                                <td><input type="password" pattern="[6-25]" placeholder="Введіть не менше 6 символів">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Місто:</td>
+                                <td>
+                                    <p>
+                                        <label>
+                                            <select name="user-city" id="user-city">
+                                                <option value="Хмельницький">Хмельницький</option>
+                                            </select>
+                                        </label>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="radio-male">
+                                <td>Стать:</td>
+                                <td>
+                                    <input type="radio" id="male-choice1" name="delivery" value="new-post">
+                                    <label for="male-choice1">Чоловік</label>
+                                    <input type="radio" id="male-choice2" name="delivery" value="courier">
+                                    <label for="male-choice2">Жінка</label>
+                                </td>
+                            </tr>
+                            <tr class="photo-input">
+                                <td>Фото:</td>
+                                <td>
+                                    <input class="file" type="file" id="file" accept=".jpg, .jpeg, .png">
+                                    <label class="label-file" for="file"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Коментарій:</td>
+                                <td><textarea name="tetarea-message" id="tetarea-message"
+                                        placeholder="Введіть текст повідомлення" cols="30" rows="10"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
                 <a href="#">Зареєструватися</a>
             </div>
             <hr>
             <div class="form5">
                 <h2>05. форма таблицею</h2>
                 <hr class="first-hr">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="th">Оформлення заявки</th>
-                        </tr>
-                        <tr>
-                            <th>Прізвище та ім’я</th>
-                            <th>Ел. пошта</th>
-                            <th>Телефон</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td><input type="text"></td>
-                            <td><input type="email"></td>
-                            <td><input type="tel"></td>
-                        </tr>
-                        <tr>
-                            <td>Країна</td>
-                            <td>Адреса</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>
-                                    <label>
-                                        <select name="user-city" id="user-city">
-                                            <option value="Хмельницький">Індонезія</option>
-                                        </select>
-                                    </label>
-                                </p>
-                            </td>
-                            <td>
-                                <input class="adress-input" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Місто</td>
-                            <td>Будинок</td>
-                            <td>Поштовий індекс</td>
-                        </tr>
-                        <tr>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <form action="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="th">Оформлення заявки</th>
+                            </tr>
+                            <tr>
+                                <th>Прізвище та ім’я</th>
+                                <th>Ел. пошта</th>
+                                <th>Телефон</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text"></td>
+                                <td><input type="email"></td>
+                                <td><input type="tel"></td>
+                            </tr>
+                            <tr>
+                                <td>Країна</td>
+                                <td>Адреса</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <label>
+                                            <select name="user-city" id="user-city">
+                                                <option value="Хмельницький">Індонезія</option>
+                                            </select>
+                                        </label>
+                                    </p>
+                                </td>
+                                <td>
+                                    <input class="adress-input" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Місто</td>
+                                <td>Будинок</td>
+                                <td>Поштовий індекс</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
                 <div class="tick">
                     <form action="">
                         <input class="check woman" id="check10" type="checkbox">
