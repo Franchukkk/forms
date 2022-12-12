@@ -188,13 +188,18 @@ label.disabled {
 }
 
 .check:checked+label:after {
-    left: 5px;
-    top: 5px;
+    left: 6px;
+    top: 7px;
     width: 7px;
     height: 4px;
     border-left: 2px solid #244dd7;
     border-bottom: 2px solid #244dd7;
     transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
+textarea {
+    font-family: Arial;
 }
 
 
@@ -247,6 +252,10 @@ label.disabled {
 .date-input {
     border: 1px solid #cccccc;
     padding: 11.35px 18px;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
 }
 
 .people-check .check+label::before {
@@ -523,7 +532,7 @@ label.disabled {
     background-color: #07be51;
 }
 
-.form6{
+.form6 {
     position: relative;
     height: 444px;
 }
@@ -675,7 +684,7 @@ input.adress-input {
     top: 192px;
 }
 
-.form5 th{
+.form5 th {
     padding-bottom: 5px;
 }
 
@@ -772,7 +781,7 @@ input.adress-input {
     top: 190px;
 }
 
-.form5 select{
+.form5 select {
     padding-top: 10px;
     padding-bottom: 10px;
 }
