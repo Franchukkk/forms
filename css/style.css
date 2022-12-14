@@ -803,7 +803,7 @@ p.disabled {
 
 input.adress-input {
     position: absolute;
-    width: 425px;
+    width: 423px;
     top: 192px;
     padding-bottom: 9px;
 }
@@ -901,8 +901,9 @@ input.adress-input {
 
 .first-hr {
     position: absolute;
-    width: 680px;
+    width: 673px;
     top: 190px;
+    left: 2px;
 }
 
 .form5 select {
