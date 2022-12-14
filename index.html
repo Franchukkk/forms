@@ -39,54 +39,49 @@
                             </label>
                         </p>
                         <p>
-                            <label>
-                                <select name="user-city" id="user-city">
-                                    <optgroup label="Ваше місто">
-                                        <option value="Київ">Київ</option>
-                                        <option value="Львів">Львів</option>
-                                        <option value="Хмельницький">Хмельницький</option>
-                                    </optgroup>
-                                </select>
-                            </label>
+                            <select name="user-city" id="user-city">
+                                <optgroup label="Ваше місто">
+                                    <option value="Київ">Київ</option>
+                                    <option value="Львів">Львів</option>
+                                    <option value="Хмельницький">Хмельницький</option>
+                                </optgroup>
+                            </select>
                         </p>
                         <p>
-                            <label>
-                                <textarea placeholder="Email" name="emailarea" id="emailarea" cols="30"
-                                    rows="10"></textarea>
-                            </label>
+                            <textarea placeholder="Email" name="emailarea" id="emailarea" cols="30"
+                                rows="10"></textarea>
                         </p>
                     </form>
                     <a href="#">Зареєструватися</a>
                 </div>
-
-                <div class="form6-relative">
-                    <div class="form6">
-                        <h2>06. фіксована форма</h2>
-                        <div class="form-container">
-                            <p>
-                                <label for="login">
-                                    <p>Логін</p>
-                                </label>
-                                <input id="login" type="text">
-                            </p>
-                            <p>
-                                <label for="pass">
-                                    <p>Пароль</p>
-                                </label>
-                                <input id="pass" type="password">
-                            </p>
-                            <a class="password-for" href="#">Забули пароль?</a>
-                            <div class="tick">
-                                <input class="check" id="forget" type="checkbox">
-                                <label for="forget">
-                                    <p>Запам’ятати пароль</p>
-                                </label>
-                            </div>
-                            <a href="#">Увійти</a>
+                <div class="form6">
+                    <h2>06. фіксована форма</h2>
+                    <div id="form-container" class="form-container">
+                        <a href="#" class="close" id="close">
+                            <div class="close-sign"></div>
+                        </a>
+                        <p>
+                            <label for="login">
+                                <p>Логін</p>
+                            </label>
+                            <input id="login" type="text">
+                        </p>
+                        <p>
+                            <label for="pass">
+                                <p>Пароль</p>
+                            </label>
+                            <input id="pass" type="password">
+                        </p>
+                        <a class="password-for" href="#">Забули пароль?</a>
+                        <div class="tick">
+                            <input class="check" id="forget" type="checkbox">
+                            <label for="forget">
+                                <p>Запам’ятати пароль</p>
+                            </label>
                         </div>
+                        <a href="#">Увійти</a>
                     </div>
                 </div>
-
             </div>
         </header>
         <main>
@@ -95,21 +90,32 @@
                 <form>
                     <h2>02. елементи</h2>
                     <div class="flex-between">
-                        <div class="radio">
-                            <p>
-                                <input type="radio" id="delivery-choice1" name="delivery" value="new-post">
-                                <label for="delivery-choice1">Нова Пошта</label>
-                            </p>
-                            <p>
-                                <input type="radio" id="delivery-choice2" name="delivery" value="courier">
-                                <label for="delivery-choice2">Кур’єр</label>
-                            </p>
-                            <p>
-                                <input type="radio" id="delivery-choice3" name="delivery" value="person-delivery"
-                                    disabled>
-                                <label for="delivery-choice3" class="disabled">Самовивіз</label>
-                            </p>
-                        </div>
+                        <form action="">
+                            <div class="radio">
+                                <p>
+                                    <input class="radio" type="radio" id="delivery-choice1" name="delivery"
+                                        value="new-post">
+                                    <label for="delivery-choice1" class="radio-label">
+                                        Нова Пошта
+                                    </label>
+                                </p>
+                                <p>
+                                    <input class="radio" type="radio" id="delivery-choice2" name="delivery"
+                                        value="courier">
+                                    <label class="radio-label" for="delivery-choice2">
+                                        Кур’єр
+                                    </label>
+                                </p>
+                                <p>
+                                    <input class="radio" type="radio" id="delivery-choice3" name="delivery"
+                                        value="person-delivery" disabled>
+                                    <label class="radio-label disabled-label-radio" for="delivery-choice3"
+                                        class="disabled">
+                                        <p class="disabled">Самовивіз</p>
+                                    </label>
+                                </p>
+                            </div>
+                        </form>
                         <div class="checkboxes">
                             <div class="tick">
                                 <form action="">
@@ -175,23 +181,19 @@
             <hr>
             <div class="form3">
                 <h2>03. стилізовані чекбокси </h2>
-                <div class="flex-between">
+                <div class="flex">
                     <div class="people-check">
                         <div class="tick">
-                            <form action="">
-                                <input class="check" id="check6" type="checkbox">
-                                <label for="check6">
-                                    <p>Чоловік</p>
-                                </label>
-                            </form>
+                            <input class="check" id="gender1" type="radio" name="gender">
+                            <label for="gender1">
+                                <p>Чоловік</p>
+                            </label>
                         </div>
                         <div class="tick">
-                            <form action="">
-                                <input class="check woman" id="check7" type="checkbox">
-                                <label for="check7">
-                                    <p>Жінка</p>
-                                </label>
-                            </form>
+                            <input class="check woman" id="gender2" type="radio" name="gender">
+                            <label for="gender2">
+                                <p>Жінка</p>
+                            </label>
                         </div>
                     </div>
                     <div class="styled-check">
@@ -225,20 +227,21 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>ФІО:</td>
-                                <td><input type="text" placeholder="Введіть ім’я"></td>
+                                <td><label for="your_name">ФІО:</label></td>
+                                <td><input type="text" id="your_name" placeholder="Введіть ім’я"></td>
                             </tr>
                             <tr>
-                                <td>Пароль:</td>
-                                <td><input type="password" pattern="[6-25]" placeholder="Введіть не менше 6 символів">
+                                <td><label for="your_password">Пароль:</label></td>
+                                <td><input type="password" id="your_password" pattern="[6-25]"
+                                        placeholder="Введіть не менше 6 символів">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Місто:</td>
+                                <td><label for="i10">Місто:</label></td>
                                 <td>
                                     <p>
                                         <label>
-                                            <select name="user-city" id="user-city">
+                                            <select name="user_city1" id="i10">
                                                 <option value="Хмельницький">Хмельницький</option>
                                             </select>
                                         </label>
@@ -246,12 +249,24 @@
                                 </td>
                             </tr>
                             <tr class="radio-male">
-                                <td>Стать:</td>
+                                <td><label for="man1">Стать:</label></td>
                                 <td>
-                                    <input type="radio" id="male-choice1" name="delivery" value="new-post">
-                                    <label for="male-choice1">Чоловік</label>
-                                    <input type="radio" id="male-choice2" name="delivery" value="courier">
-                                    <label for="male-choice2">Жінка</label>
+                                    <div class="radio flex">
+                                        <p>
+                                            <input class="radio" type="radio" id="man1" name="delivery"
+                                                value="new-post">
+                                            <label for="man1" class="radio-label">
+                                                Чоловік
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <input class="radio" type="radio" id="woman1" name="delivery"
+                                                value="new-post">
+                                            <label for="woman1" class="radio-label">
+                                                Жінка
+                                            </label>
+                                        </p>
+                                    </div>
                                 </td>
                             </tr>
                             <tr class="photo-input">
@@ -261,8 +276,10 @@
                                     <label class="label-file" for="file"></label>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Коментарій:</td>
+                            <tr class="relative">
+                                <td><label for="tetarea-message">
+                                        <p class="textarea-p">Коментарій:</p>
+                                    </label></td>
                                 <td><textarea name="tetarea-message" id="tetarea-message"
                                         placeholder="Введіть текст повідомлення" cols="30" rows="10"></textarea></td>
                             </tr>
@@ -282,44 +299,42 @@
                                 <th class="th">Оформлення заявки</th>
                             </tr>
                             <tr>
-                                <th>Прізвище та ім’я</th>
-                                <th>Ел. пошта</th>
-                                <th>Телефон</th>
+                                <th><label for="i1">Прізвище та ім’я</label></th>
+                                <th><label for="i2">Ел. пошта</label></th>
+                                <th><label for="i3">Телефон</label></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="text"></td>
-                                <td><input type="email"></td>
-                                <td><input type="tel"></td>
+                                <td><input id="i1" type="text"></td>
+                                <td><input id="i2" type="email"></td>
+                                <td><input id="i3" type="tel"></td>
                             </tr>
                             <tr>
-                                <td>Країна</td>
-                                <td>Адреса</td>
+                                <td><label for="user-city1">Країна</label></td>
+                                <td><label for="user_adress">Адреса</label></td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>
-                                        <label>
-                                            <select name="user-city" id="user-city">
-                                                <option value="Хмельницький">Індонезія</option>
-                                            </select>
-                                        </label>
+                                        <select name="user-city" id="user-city1">
+                                            <option value="Хмельницький">Індонезія</option>
+                                        </select>
                                     </p>
                                 </td>
                                 <td>
-                                    <input class="adress-input" type="text">
+                                    <input class="adress-input" id="user_adress" type="text">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Місто</td>
-                                <td>Будинок</td>
-                                <td>Поштовий індекс</td>
+                                <td><label for="i4">Місто</label></td>
+                                <td><label for="i5">Будинок</label></td>
+                                <td><label for="i6">Поштовий індекс</label></td>
                             </tr>
                             <tr>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
-                                <td><input type="text"></td>
+                                <td><input id="i4" type="text"></td>
+                                <td><input id="i5" type="text"></td>
+                                <td><input id="i6" type="text"></td>
                             </tr>
                         </tbody>
                     </table>

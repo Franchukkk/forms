@@ -28,6 +28,7 @@ h1 {
     font-weight: 700;
     font-family: "Roboto Slab";
     text-align: center;
+    margin-bottom: 70px;
 
 }
 
@@ -47,6 +48,10 @@ textarea {
 
 .form1 {
     max-width: 330px;
+}
+
+.relative {
+    position: relative;
 }
 
 input,
@@ -87,6 +92,10 @@ select {
     width: 330px;
 }
 
+.form1 select{
+    background-position-x: 303px;
+}
+
 .form1 input:hover {
     filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
     border: 1px solid #3e6aff;
@@ -104,6 +113,7 @@ select {
     border: 1px solid #3e6aff;
     border-radius: 3px;
 }
+
 
 .form1 a {
     position: relative;
@@ -135,15 +145,21 @@ hr {
     margin-bottom: 50px;
 }
 
-.radio p {
-    margin-bottom: 14px;
+.form2 input::-webkit-calendar-picker-indicator {
+    background-image: url(../images/calendar.svg);
 }
 
-.radio label {
+
+.radio p {
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
     font-family: "Roboto";
+    margin-left: 25px;
+}
+
+.radio-label {
+    position: relative;
 }
 
 label.disabled {
@@ -256,15 +272,31 @@ textarea {
     color: #1f222c;
     font-weight: 400;
     font-family: "Roboto";
+    border-radius: 3px;
+    transition: 0.3s;
 }
+
+.date-input:hover {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
 
 .people-check .check+label::before {
     content: '';
-    background: url(../images/man-checkbox.png) no-repeat;
+    background: url(../images/man-checkbox-hover.png) no-repeat;
     width: 70px;
     height: 70px;
     border: none;
     border-radius: 50%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.people-check .check:checked+label:before {
+    content: "";
+    filter: grayscale(0%);
 }
 
 .people-check .tick {
@@ -272,7 +304,7 @@ textarea {
 }
 
 .people-check .tick:last-child .check+label::before {
-    background: url(../images/woman-checkbox.png) no-repeat;
+    background: url(../images/woman-checkbox-hover.png) no-repeat;
 }
 
 
@@ -289,7 +321,7 @@ textarea {
     transition: 0.2s;
 }
 
-.people-check p:hover {
+.people-check .check:checked+label p {
     font-size: 16px;
     color: #3e6aff;
     font-weight: 700;
@@ -297,25 +329,11 @@ textarea {
 }
 
 .people-check .check:checked+label:after {
-    content: "";
-    background-image: url(../images/man-checkbox-hover.png);
-    width: 70px;
-    height: 70px;
-    border: none;
-    transform: rotate(0deg);
-    left: 0;
-    top: 0;
+    border: 0;
 }
 
 .people-check .woman:checked+label:after {
-    content: "";
-    background-image: url(../images/woman-checkbox-hover.png);
-    width: 70px;
-    height: 70px;
-    border: none;
-    transform: rotate(0deg);
-    left: 0;
-    top: 0;
+    border: 0;
 }
 
 
@@ -364,6 +382,7 @@ textarea {
     left: -58px;
     bottom: -2px;
     z-index: 1;
+    transition: 0.3s;
 }
 
 .switch {
@@ -395,6 +414,10 @@ textarea {
 
 .form3 {
     margin-bottom: 50px;
+}
+
+.form3 .flex {
+    column-gap: 360px;
 }
 
 .form4 th {
@@ -503,8 +526,9 @@ textarea {
     margin-right: 25px;
 }
 
-.form4 tr:last-child>td:first-child {
-    padding-bottom: 95px;
+p.textarea-p {
+    position: absolute;
+    top: 15px;
 }
 
 .form4 {
@@ -532,14 +556,41 @@ textarea {
     background-color: #07be51;
 }
 
+.form1 {
+    margin-bottom: 104px;
+}
+
 .form6 {
     position: relative;
-    height: 444px;
+    margin-right: 81px;
+}
+
+.close-form {
+    position: relative;
+    margin-left: 262px;
+    width: 12px;
+    height: 2px;
+    background-color: #949494;
+    transform: rotate(45deg);
+}
+
+.close-form2 {
+    position: relative;
+    margin-left: 262px;
+    bottom: 2px;
+    width: 12px;
+    height: 2px;
+    background-color: #949494;
+    transform: rotate(-45deg);
+}
+
+a.close:hover>.close-form,
+a.close:hover>.close-form2 {
+    background-color: rgb(75, 75, 75);
 }
 
 .form-container {
-    position: sticky;
-    top: 10px;
+    position: fixed;
     width: 258px;
     padding: 25px;
     padding-bottom: 55px;
@@ -547,6 +598,7 @@ textarea {
     filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
     background-color: #fafafa;
     border: 1px solid #e6e6e6;
+    z-index: 2;
 }
 
 .form-container a:last-child {
@@ -576,18 +628,61 @@ textarea {
     margin-bottom: 0;
 }
 
+input.radio {
+    display: none;
+}
+
+label.radio-label:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    left: -25px;
+    transition: 0.3s;
+}
+
+.radio:checked+label.radio-label:before {
+    border: 1px solid #3e6aff;
+}
+
+p.disabled {
+    color: #b3b3b3;
+}
+
+.radio>p {
+    margin-bottom: 15px;
+}
+
+.disabled-label-radio:before {
+    background-color: #f7f7f7;
+}
+
+.radio:checked+label.radio-label:after {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    background-color: #3e6aff;
+    left: -20px;
+    top: 5px;
+    transition: 0.5s;
+}
+
 .form-container a:last-child:hover {
     background-color: #07be51;
     filter: drop-shadow(0px 2px 2.5px rgba(8, 118, 52, 0.35));
 }
 
 .form-container input {
-    width: 100%;
+    width: 238px;
+    padding: 10px;
     max-width: 260px;
     border-radius: 3px;
     background-color: #ffffff;
     border: 1px solid #cccccc;
-    padding: 10px 0;
 }
 
 .form-container p:not(p:first-child) {
@@ -602,7 +697,6 @@ textarea {
     margin-bottom: 4px;
 }
 
-
 .password-for {
     position: relative;
     font-size: 13px;
@@ -610,8 +704,37 @@ textarea {
     font-weight: 400;
     font-family: "Roboto";
     text-decoration: none;
+}
+
+.close-sign:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: #949494;
+    transform: rotate(45deg);
+    transition: 0.2s;
+    right: 10px;
+}
 
 
+.close-sign:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: #949494;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+    right: 10px;
+}
+
+.close-sign:hover:before {
+    background-color: #000;
+}
+
+.close-sign:hover:after {
+    background-color: #000;
 }
 
 .form-container input {
@@ -790,4 +913,33 @@ input.adress-input {
     position: relative;
     top: 10px;
     width: 680px;
+}
+
+input:focus {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+select:focus {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+textarea:focus {
+    filter: drop-shadow(0 0 2.5px rgba(62, 106, 255, 0.55));
+    border: 1px solid #3e6aff;
+    border-radius: 3px;
+}
+
+textarea {
+    min-height: 16px;
+}
+
+select {
+   appearance: none;
+   background: url("../images/select.png") no-repeat right center;
+   background-position-x: 316px;
+   outline: 0;
 }
