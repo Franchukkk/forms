@@ -92,7 +92,7 @@ select {
     width: 330px;
 }
 
-.form1 select{
+.form1 select {
     background-position-x: 303px;
 }
 
@@ -375,7 +375,7 @@ textarea {
 .switch-for:after {
     content: "";
     width: 21px;
-    height: 21px;
+    height: 22px;
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -526,9 +526,11 @@ textarea {
     margin-right: 25px;
 }
 
-p.textarea-p {
+.label-textarea-p {
     position: absolute;
-    top: 15px;
+    top: 16px;
+    width: 160px;
+
 }
 
 .form4 {
@@ -561,7 +563,6 @@ p.textarea-p {
 }
 
 .form6 {
-    position: relative;
     margin-right: 81px;
 }
 
@@ -589,6 +590,12 @@ a.close:hover>.close-form2 {
     background-color: rgb(75, 75, 75);
 }
 
+.form6 {
+    position: fixed;
+    z-index: 2;
+    left: 60%;
+}
+
 .form-container {
     position: fixed;
     width: 258px;
@@ -598,7 +605,6 @@ a.close:hover>.close-form2 {
     filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.15));
     background-color: #fafafa;
     border: 1px solid #e6e6e6;
-    z-index: 2;
 }
 
 .form-container a:last-child {
@@ -649,6 +655,11 @@ label.radio-label:before {
 
 p.disabled {
     color: #b3b3b3;
+}
+
+#your_name:focus,
+#your_password:focus {
+    border: 1px solid #3e6aff;
 }
 
 .radio>p {
@@ -940,12 +951,18 @@ textarea {
 }
 
 select {
-   appearance: none;
-   background: url("../images/select.png") no-repeat right center;
-   background-position-x: 316px;
-   outline: 0;
+    appearance: none;
+    background: url("../images/select.png") no-repeat right center;
+    background-position-x: 316px;
+    outline: 0;
 }
 
-.form5 select{
+.form5 select {
     background-position-x: 195px;
+}
+
+@media screen and (max-width:1450px) {
+    .form6 {
+        left: 64%;
+    }
 }
