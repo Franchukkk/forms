@@ -805,6 +805,7 @@ input.adress-input {
     position: absolute;
     width: 425px;
     top: 192px;
+    padding-bottom: 9px;
 }
 
 .form5 th {
@@ -942,4 +943,8 @@ select {
    background: url("../images/select.png") no-repeat right center;
    background-position-x: 316px;
    outline: 0;
+}
+
+.form5 select{
+    background-position-x: 195px;
 }
