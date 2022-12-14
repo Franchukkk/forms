@@ -479,7 +479,7 @@ textarea {
     position: relative;
 }
 
-.photo-input label::before {
+.label-file:last-child:before {
     position: absolute;
     content: "Виберіть файл";
     top: -10px;
