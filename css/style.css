@@ -9,7 +9,7 @@ body {
 
 
 .wrapper {
-    max-width: 990px;
+    width: 72%;
     margin: 0 auto;
 }
 
@@ -113,7 +113,6 @@ select {
     border: 1px solid #3e6aff;
     border-radius: 3px;
 }
-
 
 .form1 a {
     position: relative;
@@ -404,7 +403,7 @@ textarea {
     font-family: "Roboto";
 }
 
-.slider-styled form {
+.slider-styled p {
     margin-bottom: 20px;
 }
 
@@ -593,7 +592,7 @@ a.close:hover>.close-form2 {
 .form6 {
     position: fixed;
     z-index: 2;
-    left: 60%;
+    right: 14%;
 }
 
 .form-container {
@@ -632,6 +631,10 @@ a.close:hover>.close-form2 {
 
 #pass {
     margin-bottom: 0;
+}
+
+.none{
+    display: none;
 }
 
 input.radio {
@@ -959,10 +962,4 @@ select {
 
 .form5 select {
     background-position-x: 195px;
-}
-
-@media screen and (max-width:1450px) {
-    .form6 {
-        left: 64%;
-    }
 }
